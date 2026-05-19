@@ -1,5 +1,6 @@
- "use client";
+"use client";
   import { useState } from "react";
+  import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope } from "react-icons/fa";
 
   export default function Contact() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -49,7 +50,23 @@
               </button>
             </form>
           )}
+
+          <div className="mt-12 flex gap-6">
+            <a href="https://github.com/andrejferencOne" target="_blank" className="text-gray-400 hover:text-white transition flex items-center gap-2">
+              <FaGithub size={20} /> GitHub
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" className="text-gray-400 hover:text-white transition flex items-center gap-2">
+              <FaLinkedin size={20} /> LinkedIn
+            </a>
+            <a href="https://facebook.com/" target="_blank" className="text-gray-400 hover:text-white transition flex items-center gap-2">
+              <FaFacebook size={20} /> Facebook
+            </a>
+            <a href="mailto:andrej.ferenc236@gmail.com" className="text-gray-400 hover:text-white transition flex items-center gap-2">
+              <FaEnvelope size={20} /> Email
+            </a>
+          </div>
         </div>
       </div>
     );
   }
+
